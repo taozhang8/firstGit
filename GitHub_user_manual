@@ -1,0 +1,17 @@
+配置自己的用户名、邮箱名和color UI，可以使用git config --global命令。这里设置的姓名何邮箱地址会用在Git的提交日志中。
+
+克隆仓库到本地的命令：git clone git@github.com:taozhang8/helloworld.git即可
+在本地编辑好后，可以使用git status查看状态
+提交方法：git add helloworld.cpp #将文件加入暂存区
+         git commit -m "关于本次提交的描述信息" #完成提交
+添加成功后，使用git log命令查看提交日志
+然后使用push，github上的仓库就会被更新。命令：git push
+
+关于git commit.如果想要在提交的时候记述更详细的信息，请不要加-m，直接执行git commit命令，然后会进入编辑器界面，按照如下格式进行记述：
+第一行：用一行文字简述提交的更改内容
+第二行：空行
+第三行及以后：记述更改的原因和详细内容
+如果要中止提交，将提交信息留空并直接关闭编辑器即可
+
+关于git log.如果只想让程序显示第一行简述信息，可以在git log命令后加上--pretty=short；git log --pretty=short
+在git log后面加上目录名，便会只显示该目录下的日志，如果加的是文件名，就会只显示与该文件相关的日志。git log README.md
